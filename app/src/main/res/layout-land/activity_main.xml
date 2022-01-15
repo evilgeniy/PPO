@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/math_operation"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:textColor="@android:color/black"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:textSize="40sp"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="end"
+        android:ellipsize="end"
+        android:textSize="30sp"
+        android:singleLine="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/fragment_extended"
+            android:name="com.example.lab1.Extended"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_extended"
+            />
+
+        <fragment
+            android:id="@+id/fragment_basic"
+            android:name="com.example.lab1.Basic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_basic"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
